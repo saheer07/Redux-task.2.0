@@ -6,11 +6,13 @@ import Main from "./Components/Main";
 
 function App() {
   const [count, setCount] = useState(3)
+  const [color, setColor] = useState("red")
   return (
-    <div className="App">
-      <Header />
-      <Main count={count} setCount={setCount} />
-      <Footer />
+    <div className="max-w-[960px] min-h-screen mx-auto border-2 border-red-500 flex flex-col">
+      <Header count={count} color={color} />
+      <Main count={count} setCount={setCount} 
+      color={color} setColor={setColor}/>
+      <Footer color={color} count={count} />
     </div>
   );
 }
